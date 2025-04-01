@@ -625,21 +625,86 @@
     
            <!-- modify this form HTML and place wherever you want your form -->
 <form
-  action="https://formspree.io/f/xqapdvvr"
-  method="POST"
+action="https://formspree.io/f/xqapdvvr"
+method="POST"
 >
-  <label>
-    Your email:
-    <input type="email" name="email">
-  </label>
-  <label>
-    Your message:
-    <textarea name="message"></textarea>
-  </label>
-  <!-- your other form fields go here -->
-  <button type="submit">Send</button>
-</form
-        </div>
+<label>
+  Your email:
+  <input type="mailto:adolfsamwel0@gmail.com" name="adolfsamwel0@gmail.com">
+</label>
+<label>
+  Your message:
+  <textarea name="message"></textarea>
+</label>
+<!-- your other form fields go here -->
+<button type="submit">Send</button>
+</forrm>
+
+<!-- CSS Styles -->
+<style>
+  /* General Form Styling */
+  .contact-form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Labels */
+  .contact-form label {
+    font-weight: bold;
+    color: #333;
+  }
+
+  /* Input & Textarea */
+  .contact-form input, 
+  .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: 0.3s;
+  }
+
+  /* Focus Effect */
+  .contact-form input:focus, 
+  .contact-form textarea:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+  }
+
+  /* Submit Button */
+  .contact-form button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  /* Button Hover */
+  .contact-form button:hover {
+    background: #0056b3;
+  }
+
+  /* Responsive */
+  @media (max-width: 500px) {
+    .contact-form {
+      max-width: 90%;
+    }
+  }
+</style>
+      </div>
     </section>
     
     <script>
