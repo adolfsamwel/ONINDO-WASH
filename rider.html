@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WashMyRide -Best Car Wash in Tanzania</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1><span class="wash">FAST</span><span class="myride">SPLASH</span></h1>
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#membership">Membership</a></li>
+                <li><a href="#about-us">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+         </header>
+
+             
+    <section id="hero">
+        <div class="hero-content">
+            <h2>The Best Car Wash Service in Tanzania</h2>
+            <p>Reliable, Affordable, and Always Clean.</p>
+          
+          </div>
+        
+        <div class="carousel">
+            <div class="carousel-images">
+                <img src="images/ridewasher.jpg" alt="Car Wash 1" class="hero-image">
+                <img src="images/pexels-olly-3775124.jpg" alt="Car Wash 2" class="hero-image">
+                <img src="images/pexels-tima-miroshnichenko-6872146.jpg" alt="Car Wash 3" class="hero-image">
+                <img src="images/pexels-tima-miroshnichenko-6873103.jpg" alt="Car Wash 4" class="hero-image">
+                <img src="images/pexels-fbo-media-535159577-16505291.jpg" alt="Car Wash 1 Clone" class="hero-image"> <!-- Clone of the first image for seamless loop -->
+            </div>
+        </div>
+    </section>
+    
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Car Wash Service - Order & Payment</title>
+        <style>
+            /* General Styles */
+            body {
+                font-family: 'Arial', sans-serif;
+                background-color: #f4f4f9;
+                color: #333;
+                margin: 0;
+                padding: 0;
+                line-height: 1.6;
+            }
+    
+            h3 {
+                color: #007bff;
+                text-align: center;
+                margin-top: 20px;
+            }
+    
+            .container {
+                width: 80%;
+                margin: 0 auto;
+                padding: 20px;
+                background: #fff;
+                border-radius: 10px;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            }
+    
+            .order-section, .location-section, .service-section, .payment-section {
+                margin: 20px 0;
+                text-align: center;
+            }
+    
+            select {
+                width: 60%;
+                padding: 10px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+                margin-bottom: 20px;
+                font-size: 16px;
+            }
+    
+            button {
+                background-color: #28a745;
+                color: white;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                font-size: 16px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+            }
+    
+            button:hover {
+                background-color: #218838;
+            }
+    
+            .hidden {
+                display: none;
+            }
+    
+            .service-container, .payment-container {
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                margin-top: 20px;
+            }
+    
+            .service-option, .payment-option {
+                background-color: #f9f9f9;
+                padding: 20px;
+                border-radius: 10px;
+                text-align: center;
+                width: 30%;
+                margin-bottom: 20px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                cursor: pointer;
+            }
+    
+            .service-option h4, .payment-option h4 {
+                color: #007bff;
+                margin-bottom: 10px;
+            }
+    
+            .payment-logo {
+                width: 100px;
+                height: auto;
+                margin-bottom: 10px;
+            }
+    
+            /* Responsive Design */
+            @media (max-width: 768px) {
+                select {
+                    width: 90%;
+                }
+    
+                .service-option, .payment-option {
+                    width: 90%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+    
+    <div class="container">
+        <!-- Order Wash Button -->
+        <section class="order-section">
+            <h3>Order Your Car Wash Service</h3>
+            <button id="order-wash-btn">Order Wash</button>
+        </section>
+    
+        <!-- Location selection (initially hidden) -->
+        <section id="location-section" class="location-section hidden">
+            <h3>Select Location</h3>
+            <select id="location">
+                <option value="Chamwino">Chamwino</option>
+                <option value="UDOM">UDOM</option>
+                <option value="Mtumba">Mtumba</option>
+                <option value="Dodoma Mjini">Dodoma Mjini</option>
+                <option value="Airport">Airport</option>
+                <option value="Machinga">Machinga</option>
+                <option value="Kikuyu">Kikuyu</option>
+                <option value="Nanenane">Nanenane</option>
+                <option value="Msalato">Msalato</option>
+            </select>
+            <button id="proceed-to-service-btn">Proceed to Service Choice</button>
+        </section>
+    
+        <!-- Service selection (initially hidden) -->
+        <section id="service-section" class="service-section hidden">
+            <h3>Select Your Service</h3>
+            <div class="service-container">
+                <div class="service-option">
+                    <h4>Wash 'n Go</h4>
+                    <p>Quick Wash | 45 min | Tsh 5,000</p>
+                    <button class="choose-service-btn" data-service="Wash 'n Go">Choose Service</button>
+                </div>
+                <div class="service-option">
+                    <h4>Premium Wash</h4>
+                    <p>Inside-Out | 1h 15min | Tsh 15,000</p>
+                    <button class="choose-service-btn" data-service="Premium Wash">Choose Service</button>
+                </div>
+                <div class="service-option">
+                    <h4>Platinum Wash</h4>
+                    <p>With Sanitization | 1h 20min | Tsh 30,000</p>
+                    <button class="choose-service-btn" data-service="Platinum Wash">Choose Service</button>
+                </div>
+                
+            </div>
+        </section>
+    
+        <!-- Payment selection (initially hidden) -->
+        <section id="payment-section" class="payment-section hidden">
+            <h3>Choose Your Payment Method</h3>
+            <div class="payment-container">
+                <div class="payment-option" data-payment="mpesa">
+                    <img src="logo/mpesa.jpeg" alt="M-Pesa" class="payment-logo">
+                    <h4>M-Pesa</h4>
+                     <button class="pay-btn">Pay with M-Pesa</button>
+                </div>
+                <div class="payment-option" data-payment="airtel-money">
+                    <img src="logo/airtel money.png" alt="Airtel Money" class="payment-logo">
+                    <h4>Airtel Money</h4>
+                   
+                    <button class="pay-btn">Pay with Airtel Money</button>
+                </div>
+                <div class="payment-option" data-payment="tigo-pesa">
+                    <img src="logo/tigo.png" alt="Tigo Pesa" class="payment-logo">
+                    <h4>Tigo Pesa</h4>
+                    <button class="pay-btn">Pay with Tigo Pesa</button>
+                </div>
+                <div class="payment-option" data-payment="crdb">
+                    <img src="logo/crdb.png" alt="CRDB" class="payment-logo">
+                    <h4>CRDB</h4>
+                   
+                    <button class="pay-btn">Pay with CRDB</button>
+                </div>
+            </div>
+    
+            <!-- Payment Instructions Section (initially hidden) -->
+            <div id="payment-instructions" class="payment-instructions hidden">
+                <h4>Payment Steps</h4>
+                <div id="mpesa-instructions" class="instruction-step hidden">
+                    <p>1. Piga *150*00#</p>
+                    <p>2. Chagua namba , </p>
+                    <p>3. Ingiza namba ya kampuni (0748084549)</p>
+                    <p>4. Ingiza kiasi cha kulipia (Tsh)</p>
+                    <p>5. Thibitisha malipo yako</p>
+                    <P>6. JINA ADOLF ONINDO</P>
+                </div>
+                <div id="airtel-money-instructions" class="instruction-step hidden">
+                    <p>1. Piga *150*60#</p>
+                    <p>2. Chagua namba , </p>
+                    <p>3. Ingiza namba ya kampuni (0748084549)</p>
+                    <p>4. Ingiza kiasi cha kulipia (Tsh)</p>
+                    <p>5. Thibitisha malipo yako</p>
+                    <P>6. JINA ADOLF ONINDO</P>
+                </div>
+                <div id="tigo-pesa-instructions" class="instruction-step hidden">
+                    <p>1. Piga *150*01#</p>
+                    <p>2. Chagua namba , </p>
+                    <p>3. Ingiza namba ya kampuni (0748084549)</p>
+                    <p>4. Ingiza kiasi cha kulipia (Tsh)</p>
+                    <p>5. Thibitisha malipo yako</p>
+                    <P>6. JINA ADOLF ONINDO</P>
+                </div>
+                <div id="crdb-instructions" class="instruction-step hidden">
+                    <p>1. Piga *150*03#</p>
+                    <p>2. Chagua huduma ya kulipa</p>
+                    <p>3. Ingiza namba ya akaunti (0152897211200)</p>
+                    <p>4. Ingiza kiasi cha kulipia (Tsh)</p>
+                    <p>5. Thibitisha malipo yako</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <script>
+        // Elements
+        const orderWashBtn = document.getElementById('order-wash-btn');
+        const proceedToServiceBtn = document.getElementById('proceed-to-service-btn');
+        const locationSection = document.getElementById('location-section');
+        const serviceSection = document.getElementById('service-section');
+        const paymentSection = document.getElementById('payment-section');
+        const serviceBtns = document.querySelectorAll('.choose-service-btn');
+        const payBtns = document.querySelectorAll('.pay-btn');
+        const paymentInstructions = document.getElementById('payment-instructions');
+        const instructionSteps = document.querySelectorAll('.instruction-step');
+    
+        // Show location section when "Order Wash" is clicked
+        orderWashBtn.addEventListener('click', function() {
+            locationSection.classList.remove('hidden');
+        });
+    
+        // Show service section when "Proceed to Service Choice" is clicked
+        proceedToServiceBtn.addEventListener('click', function() {
+            serviceSection.classList.remove('hidden');
+        });
+    
+        // Show payment section when a service is chosen
+        serviceBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                paymentSection.classList.remove('hidden');
+            });
+        });
+    
+        // Show payment instructions based on chosen payment method
+        payBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                paymentInstructions.classList.remove('hidden');
+                instructionSteps.forEach(step => step.classList.add('hidden')); // Hide all instructions
+                const selectedPayment = this.parentNode.getAttribute('data-payment');
+                document.getElementById(`${selectedPayment}-instructions`).classList.remove('hidden'); // Show selected method's instructions
+            });
+        });
+    </script>
+    
+    </body>
+    </html>
+    
+    <section id="pricing">
+        <h3>Retail Pricing</h3>
+        <p class="pricing-subtitle">Huduma zinakufata ulipo, gari linaoshwa kwa ubora wa hali ya juu na kwa haraka sana.</p>
+        <div class="pricing-table">
+            <div class="price-option">
+                <h4>Wash 'n Go</h4>
+                <p>Quickest Wash | 45m</p>
+                <p>Tsh 5,000</p>
+                <ul>
+                    <li>Exterior clean, wash & wax</li>
+                    <li>Rims, tyres & tyreshine</li>
+                    <li>Exterior window clean</li>
+                </ul>
+            </div>
+            <div class="price-option">
+                <h4>Premium Wash</h4>
+                <p>Inside-Out | 1h 15m</p>
+                <p>Tsh 15,000</p>
+                <ul>
+                    <li>Exterior clean, wash & wax</li>
+                    <li>Rims, tyres & tyreshine</li>
+                    <li>Interior & exterior window clean</li>
+                    <li>Vacuum seats, floor & boot</li>
+                    <li>Dashboard & console wipe down</li>
+                </ul>
+            </div>
+            <div class="price-option">
+                <h4>Platnumz Wash</h4>
+                <p>With Sanitise | 1h 20m</p>
+                <p>Tsh 25,000</p>
+                <ul>
+                    <li>Exterior clean, wash & wax</li>
+                    <li>Rims, tyres & tyreshine</li>
+                    <li>Interior & exterior window clean</li>
+                    <li>Vacuum seats, floor & boot</li>
+                    <li>Dashboard & console wipe down</li>
+                    <li>Apply aerosol sanitiser</li>
+                </ul>
+            </div>
+        </div>
+  
+
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Membership Subscription</title>
+            <link rel="stylesheet" href="styles.css">
+        </head>
+        <body>
+        
+        <section id="membership">
+            <h3>Wash at Home - Membership</h3>
+            <div class="membership-options">
+                <div class="membership-option">
+                    <h4>Regular</h4>
+                    <p>Monthly | Tsh 40,000</p>
+                    <ul>
+                        <li>Exterior clean, wash & wax</li>
+                        <li>Rims, tyres & tyreshine</li>
+                        <li>Exterior window clean</li>
+                    </ul>
+                    <button class="subscribe-btn" data-plan="Regular" data-price="50,000">Subscribe Now</button>
+                </div>
+                <div class="membership-option">
+                    <h4>Premium</h4>
+                    <p>Monthly | Tsh 60,000</p>
+                    <ul>
+                        <li>Exterior clean, wash & wax</li>
+                        <li>Rims, tyres & tyreshine</li>
+                        <li>Interior & exterior window clean</li>
+                        <li>Vacuum seats, floor & boot</li>
+                        <li>Dashboard & console wipe down</li>
+                    </ul>
+                    <button class="subscribe-btn" data-plan="Premium" data-price="80,000">Subscribe Now</button>
+                </div>
+                <div class="membership-option">
+                    <h4>Platinum</h4>
+                    <p>Monthly | Tsh 80,000</p>
+                    <ul>
+                        <li>Exterior clean, wash & wax</li>
+                        <li>Rims, tyres & tyreshine</li>
+                        <li>Interior & exterior window clean</li>
+                        <li>Vacuum seats, floor & boot</li>
+                        <li>Dashboard & console wipe down</li>
+                        <li>Apply aerosol sanitiser</li>
+                    </ul>
+                    <button class="subscribe-btn" data-plan="Platinum" data-price="100,000">Subscribe Now</button>
+                </div>
+            </div>
+        </section>
+        
+          <section id="services">
+      <h3>Our Services</h3>
+      <ul>
+        <li>
+          <img src="images/retail.jpeg" alt="Retail Car Wash">
+          <h4>Retail: Wash while you shop</h4>
+          <p>Get your car cleaned quickly while you run errands.</p>
+        </li>
+        <li>
+          <img src="images/at work.png" alt="Fleet Service">
+          <h4>Fleets: Regular cleaning for companies</h4>
+          <p>Keep your company vehicles looking great with regular washes.</p>
+        </li>
+        <li>
+          <img src="images/airport.png" alt="Work Wash">
+          <h4>Wash at Work: Convenient onsite cleaning</h4>
+          <p>Get your car cleaned without leaving work.</p>
+        </li>
+        <li>
+          <img src="images/airport.jpeg" alt="Airport Wash">
+          <h4>Airports: Return to a spotless car</h4>
+          <p>Come back to a sparkling clean car after your flight.</p>
+        </li>
+        <li>
+          <img src="images/home.jpeg" alt="Home Wash">
+          <h4>Wash at Home: Recurring services</h4>
+          <p>Keep your car clean without leaving home with our monthly services.</p>
+        </li>
+      </ul>
+    </section>
+    
+    <!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Njia za Malipo</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+<body>
+
+    
+    <div class="payment-container">
+        <!-- M-Pesa -->
+        <div class="payment-method">
+            <img src="logo/mpesa.jpeg" alt="M-Pesa" class="payment-logo">
+            <h2>M-Pesa</h2>
+            <button class="pay-btn"> M-Pesa</button>
+          </div>
+
+        <!-- Airtel Money -->
+        <div class="payment-method">
+            <img src="logo/airtel money.png" alt="Airtel Money" class="payment-logo">
+            <h2>Airtel Money</h2>
+            <button class="pay-btn"> Airtel Money</button>
+            
+        </div>
+
+        <!-- Tigo Pesa -->
+        <div class="payment-method">
+            <img src="logo/tigo.png" alt="Tigo Pesa" class="payment-logo">
+            <h2>Tigo Pesa</h2>
+            <button class="pay-btn"> Tigo Pesa</button>
+            
+        </div>
+
+        <!-- CRDB Bank -->
+        <div class="payment-method">
+            <img src="logo/crdb.png" alt="CRDB" class="payment-logo">
+            <h2>CRDB Bank</h2>
+            <button class="pay-btn">CRDB Bank</button>
+            
+        </div>
+    </div>
+</body>
+</html>
+
+           <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - FastSplash Mobile Car Wash</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif; /* Clear and modern font */
+        }
+        
+        body {
+            background-color: #f2f2f2; /* Soft background for better contrast */
+            color: #333;
+        }
+
+        section#contact {
+            background: #ffffff;
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            margin: 30px auto;
+            text-align: center;
+        }
+
+        h3 {
+            font-size: 2.5em;
+            color: #05445E;
+            margin-bottom: 20px;
+            animation: fadeIn 1s ease-in;
+        }
+
+        .contact-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .contact-info, .contact-form {
+            flex: 1;
+            min-width: 320px;
+            margin: 10px;
+            padding: 25px;
+            background-color: #189AB4;
+            color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .contact-info:hover, .contact-form:hover {
+            transform: translateY(-10px); /* Add hover effect */
+        }
+
+        .contact-info h4, .contact-form h4 {
+            margin-bottom: 20px;
+            color: #ffdd57;
+            font-size: 1.5em;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+
+        .contact-info p {
+            margin-bottom: 15px;
+            color: #E8F9FD;
+        }
+
+        .contact-info a {
+            color: #ffdd57;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            outline: none;
+            font-size: 1em;
+        }
+
+        .contact-form input:focus, .contact-form textarea:focus {
+            border-color: #05445E;
+        }
+
+        .contact-form button {
+            width: 100%;
+            padding: 12px;
+            background-color: #ffdd57;
+            color: #05445E;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2em;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #ffd500;
+        }
+
+        @media (max-width: 768px) {
+            .contact-container {
+                flex-direction: column;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <section id="contact">
+        <h3>Contact Us</h3>
+        <p>Reach out to us for any inquiries or to book your next car wash. We're here to help!</p>
+    
+        <div class="contact-container">
+            <div class="contact-info">
+                <h4>Contact Information</h4>
+                <p><strong>Phone:</strong> <a href="tel:+255749284529">+255 749 284 529</a></p>
+                <p><strong>Email:</strong> <a href="mailto:adolfsamwel0@gmail.com">adolfsamwel0@gmail.com</a></p>
+                <p><strong>Location:</strong> Dodoma, Tanzania</p>
+            </div>
+    
+            <!-- Updated Form -->
+            <form action="https://formsubmit.co/adolfsamwel0@gmail.com" method="POST" class="contact-form" id="contactForm">
+                <h4>Send Us a Message</h4>
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                
+                <!-- Optional: Add hidden fields for better tracking -->
+                <input type="hidden" name="_subject" value="New Contact Form Submission">
+                <input type="hidden" name="_captcha" value="false">
+                
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+    
+    <script>
+        // JavaScript for handling form submission
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
+
+            if (!name) {
+                alert('Please fill in your name.');
+                return;
+            }
+
+            if (!email) {
+                alert('Please provide a valid email address.');
+                return;
+            }
+
+            if (!message) {
+                alert('Please enter your message.');
+                return;
+            }
+
+            // Open mail client with pre-filled details
+            var mailtoLink = "mailto:adolfsamwel0@gmail.com?subject=Message from " + name + "&body=" + encodeURIComponent(message);
+            window.location.href = mailtoLink;
+        });
+    </script>
+</body>
+</html>
+
+<section id="about-us">
+    <h3>About Us</h3>
+    <p>We are the best and most reliable car wash in Tanzania. Our mission is to provide affordable, high-quality services that keep your car looking great.</p>
+</section>
+
+    <footer>
+        <p>&copy; 2024 fastsplash.co.tz | Designed by ADOLF SAMWEL</p>
+    </footer>
+    </body>
+    </html>
+    
